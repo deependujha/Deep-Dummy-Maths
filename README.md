@@ -11,12 +11,13 @@ pip install deep-dummy-maths
 ## Usage
 
 ```python
-from deep_dummy_maths import my_sum, my_diff, my_pro, my_div
+from deep_dummy_maths import my_sum, my_diff, my_pro, my_div, my_factorial(10)
 
 my_sum(1, 2)  # Output: 3
 my_diff(1, 2)  # Output: -1
 my_pro(1, 2)  # Output: 0.5
 my_div(1, 2)  # Output: 0.5
+my_factorial(10)  # Output: 120
 ```
 
 ## Contributing
