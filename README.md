@@ -30,6 +30,8 @@ Contributions are welcome!
 
 ### Using **Poetry** with `src/`
 
+https://browniebroke.com/blog/convert-existing-poetry-to-src-layout/
+
 ```toml
 [tool.poetry]
 # ... other metata
