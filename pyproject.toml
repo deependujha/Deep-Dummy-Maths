@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "Deep_Dummy_Maths"
-version = "0.0.1"
+version = "0.0.2"
 description = "A dummy library for mathematical functions created by Deependu Jha."
 authors = ["deependujha <deependujha21@gmail.com>"]
 license = "MIT"
