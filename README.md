@@ -23,3 +23,23 @@ my_factorial(10)  # Output: 120
 ## Contributing
 
 Contributions are welcome!
+
+---
+
+## For future reference
+
+### Using **Poetry** with `src/`
+
+```toml
+[tool.poetry]
+# ... other metata
+packages = [
+     { include = "my_package" },
+     { include = "my_package", from = "src" },
+  ]
+
+
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+```
