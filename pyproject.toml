@@ -8,7 +8,7 @@ readme = "README.md"
 packages = [{include = "deep_dummy_maths", from="src"}]
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.6"
 
 
 [build-system]
