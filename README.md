@@ -20,10 +20,6 @@ my_div(1, 2)  # Output: 0.5
 my_factorial(10)  # Output: 120
 ```
 
-## Contributing
-
-Contributions are welcome!
-
 ---
 
 ## For future reference
