@@ -3,7 +3,7 @@
 #
 #    maturin generate-ci github
 #
-name: CI
+name: PyPi release
 
 on:
   workflow_dispatch: # this trigger is added so that we can independently run this workflow too in case of any failure

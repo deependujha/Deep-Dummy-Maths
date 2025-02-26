@@ -6,7 +6,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Upload Python Package
+name: CI test
 
 on:
   push:
@@ -19,7 +19,7 @@ permissions:
   contents: read
 
 jobs:
-  deploy:
+  pytest:
 
     runs-on: ubuntu-latest
 
@@ -30,8 +30,11 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip install poetry
+        poetry sync
+        poetry build
+        pip install -e .
     - name: Test code
       run: |
-        maturin develop --release
+        pip install pytest
         pytest
