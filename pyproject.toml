@@ -1,6 +1,6 @@
 [project]
 name = "deep_dummy_maths"
-version = "0.0.3"
+version = "0.1.0"
 description = "A dummy library for mathematical functions created by Deependu Jha."
 authors = [{ name = "deependujha", email = "deependujha21@gmail.com" }]
 license = { text = "MIT" }
