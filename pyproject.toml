@@ -1,25 +1,53 @@
-[tool.poetry]
+[project]
 name = "Deep_Dummy_Maths"
 version = "0.0.3"
 description = "A dummy library for mathematical functions created by Deependu Jha."
-authors = ["deependujha <deependujha21@gmail.com>"]
-license = "MIT"
+authors = [{ name = "deependujha", email = "deependujha21@gmail.com" }]
+license = { text = "MIT" }
 readme = "README.md"
-packages = [{include = "deep_dummy_maths", from="src"}]
+requires-python = ">=3.8"
+dependencies = [
+    "maturin>=1.8.2",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
 
-[tool.poetry.dependencies]
-python = "^3.7"
-maturin = "^1.8.2"
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
 
 [tool.maturin]
 module-name = "Deep_Dummy_Maths._core"
 python-packages = ["Deep_Dummy_Maths"]
 python-source = "src"
 
-[build-system]
-requires = ["poetry-core","maturin>=1.0,<2.0"]
-# build-backend = "poetry.core.masonry.api"
-build-backend = "maturin"
-
+# taken from lightning-ai/litdata (Apache License)
 [tool.pytest.ini_options]
 pythonpath = ["src"]
+testpaths = [
+    "tests",
+]
+norecursedirs = [
+    ".git",
+    ".github",
+    ".venv",
+    "dist",
+    "target",
+]
+addopts = [
+    "--strict-markers",
+    "--doctest-modules",
+    "--color=yes",
+    "--disable-pytest-warnings",
+    "--ignore=legacy/checkpoints",
+]
+markers = [
+    "cloud: Run the cloud tests for example",
+]
+filterwarnings = [
+    "error::FutureWarning",
+]
+xfail_strict = true
+junit_duration_report = "call"
