@@ -1,5 +1,5 @@
 [project]
-name = "Deep_Dummy_Maths"
+name = "deep_dummy_maths"
 version = "0.0.3"
 description = "A dummy library for mathematical functions created by Deependu Jha."
 authors = [{ name = "deependujha", email = "deependujha21@gmail.com" }]
@@ -19,8 +19,8 @@ requires = ["maturin>=1.0,<2.0"]
 build-backend = "maturin"
 
 [tool.maturin]
-module-name = "Deep_Dummy_Maths._core"
-python-packages = ["Deep_Dummy_Maths"]
+module-name = "deep_dummy_maths._core"
+python-packages = ["deep_dummy_maths"]
 python-source = "src"
 
 # taken from lightning-ai/litdata (Apache License)
