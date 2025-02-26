@@ -8,12 +8,18 @@ readme = "README.md"
 packages = [{include = "deep_dummy_maths", from="src"}]
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.7"
+maturin = "^1.8.2"
 
+[tool.maturin]
+module-name = "Deep_Dummy_Maths._core"
+python-packages = ["Deep_Dummy_Maths"]
+python-source = "src"
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core","maturin>=1.0,<2.0"]
+# build-backend = "poetry.core.masonry.api"
+build-backend = "maturin"
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
