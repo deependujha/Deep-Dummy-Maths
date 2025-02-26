@@ -5,7 +5,7 @@ description = "A dummy library for mathematical functions created by Deependu Jh
 authors = [{ name = "deependujha", email = "deependujha21@gmail.com" }]
 license = { text = "MIT" }
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 dependencies = [
     "maturin>=1.8.2",
 ]
